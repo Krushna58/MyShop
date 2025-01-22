@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './Products.css';
 import useApi from './useApi';
-import Spinner from 'react-bootstrap/Spinner';
-import Loading from './Loading';
+
+
 
 function ProductsList() {
 
@@ -33,7 +33,7 @@ function ProductsList() {
         <button onClick={()=>{seturl('https://dummyjson.com/products/category/furniture')}}>Furniture</button>
 
         {
-            loading ? <Loading/>:
+           
             products.map((item)=>{
                 return <div className='product'>
                     <h1>{item.title}</h1>
